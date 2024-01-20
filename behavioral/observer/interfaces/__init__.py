@@ -1,2 +1,2 @@
-from isubject import ISubject
-from iobserver import IObserver
+from .isubject import ISubject
+from .iobserver import IObserver

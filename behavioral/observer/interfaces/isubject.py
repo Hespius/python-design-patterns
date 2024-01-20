@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from iobserver import IObserver
+from .iobserver import IObserver
 
 class ISubject(ABC):
 

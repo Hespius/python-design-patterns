@@ -20,17 +20,17 @@ feed2 = Feed(user=user2)
 cellphone2 = Cellphone(user=user2, model="Samsung Galaxy S20")
 
 # Subscribe observers
-post_notification.follow(feed1)
-post_notification.follow(cellphone1)
-post_notification.follow(feed2)
-post_notification.follow(cellphone2)
+post_notification.follow(observer=feed1)
+post_notification.follow(observer=cellphone1)
+post_notification.follow(observer=feed2)
+post_notification.follow(observer=cellphone2)
 
 print("Notify all users:")
-post_notification.notify_all_users()
+post_notification.notify_all_users(post=post1)
 
 print("\nUnfollow John's feed and cellphone...")
-post_notification.unfollow(feed1)
-post_notification.unfollow(cellphone1)
+post_notification.unfollow(observer=feed1)
+post_notification.unfollow(observer=cellphone1)
 
-print("Notify all users AGAIN:")
-post_notification.notify_all_users()
+print("\nNotify all users AGAIN:")
+post_notification.notify_all_users(post=post2)
